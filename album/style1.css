@@ -1,0 +1,278 @@
+body * {
+    /* box-sizing: border-box; */
+    box-shadow: 0 0 5px black;
+}
+
+body {
+    background-color: #E7E7E7 !important;
+}
+
+main {
+    background-color: white;
+    height: 468px;
+
+}
+
+article {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white
+}
+
+header {
+    width: 1024px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #66CCCC;
+}
+
+header table div.text {
+    height: 300px;
+    padding-top: 110px;
+    padding-left: 138px;
+    box-sizing: border-box;
+}
+
+.font {
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.font1 {
+    font-size: 2.1rem;
+    color: white;
+    text-decoration: underline;
+}
+
+.frame {
+    position: absolute;
+    top: 130px;
+    left: 350px;
+}
+
+.bigalbum {
+    width: 560px;
+    border: 20px solid #e7e7e7;
+    margin: 0 auto;
+    box-sizing: content-box;
+}
+
+div.flexcolletion {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+div.flexcolletion img {
+    border: 5px solid #e7e7e7;
+    width: 80px;
+
+}
+
+.flexcolletion img:hover {
+    border: 5px solid #FF997C;
+}
+
+.flexcolletion img:active {
+    border: 5px solid #66CCCC;
+}
+
+aside {
+    /* border: #000000 solid 1px; */
+    position: absolute;
+    width: 350px;
+    height: 468px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #827F52;
+    font-family: 微軟正黑體;
+    padding-top: 16rem;
+    padding-left: 130px;
+}
+
+a {
+    text-decoration: none;
+}
+
+main aside>a {
+    font-size: 20px;
+    color: #827F52;
+    margin-bottom: 5px;
+}
+
+main aside>a:hover {
+    color: #827F52;
+}
+
+.pic-home {
+    width: 24px;
+    border-radius: 50%;
+    vertical-align: -15%;
+}
+
+
+
+
+
+/* 瀏覽器寬度大於820px*/
+/*   同時定義媒體類型和媒體特性，中間需用 and 連結*/
+@media screen and (min-width:701px) {
+    .d-MD-none {
+        display: none;
+    }
+}
+
+
+/*瀏覽器寬度小於 820px  */
+@media screen and (max-width:700px) {
+    article {
+        width: 700px;
+        height: 1020px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: none;
+    }
+
+    header {
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+        background-color: #66CCCC;
+        order: 0;
+    }
+
+    main {
+        background-color: white;
+        width: 100%;
+        height: 620px;
+        order: 2;
+
+    }
+
+
+    header table div.text {
+        display: flex;
+        width: 700px;
+        padding-top: 0px;
+        padding-left: 0px;
+
+    }
+
+    .pic {
+        width: 210px;
+        height: 210px;
+        margin-left: 70px;
+        margin-top: 55px;
+
+    }
+
+    .dnone {
+        /* display: none; */
+        z-index: -1;
+        /* width: 0;
+        height: 0; */
+
+    }
+
+    .slow_hide {
+        opacity: 0;
+    }
+
+    aside {
+        position: static;
+        width: 100%;
+        height: 210px;
+        color: #827F52;
+        font-family: 微軟正黑體;
+        padding-top: 5rem;
+        padding-left: 9rem;
+    }
+
+    div.flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 45px 0px 20px 20px;
+    }
+
+    .mt-5-2 {
+        margin-top: 3.3rem;
+    }
+
+    div.flexcolletion img:target {
+        border: 5px solid #e7e7e7;
+        width: 120px;
+        height: 120px;
+
+    }
+
+    .frame {
+        position: static;
+        order: 1;
+    }
+
+    .bigalbum {
+        width: 80vw;
+        height: 100%;
+        transition: 1s;
+    }
+
+    div.flexcolletion {
+        height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding: 20px 70px;
+    }
+
+    div.flexcolletion img {
+        border: 1px solid #000000;
+        border: 5px solid #e7e7e7;
+        width: 250px;
+        /* height: 170px; */
+
+    }
+
+    .flexcolletion img:active {
+        border: 5px solid #FF997C;
+    }
+
+    .filter {
+        background-color: rgba(0, 0, 0, 0.6);
+        background-repeat: repeat-y;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        transition: 1.5s;
+    }
+
+    #close {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 1.5s;
+    }
+
+    #closeicon span {
+        color: aliceblue;
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: rgba(180, 178, 173, 0.5);
+        border: 5px solid rgba(206, 178, 109, 0.5);
+        padding: 0 10px;
+    }
+}

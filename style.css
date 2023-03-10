@@ -1,0 +1,132 @@
+body * {
+    box-shadow: 0 0 5px black;
+}
+
+body {
+    background-color: #e7e7e7 !important;
+}
+
+article {
+    width: 1024px;
+    height: 768px;
+    /* margin: 0 auto;
+    margin-top: 30px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    width: 1024px;
+    height: 300px;
+    background-color: #5acecb;
+    margin: 0 auto;
+    /* border: 1px solid #000000; */
+    font-size: 39px;
+    font-weight: 900;
+}
+
+.pic {
+    width: 176px;
+    height: 176px;
+    margin-left: 110px;
+
+}
+
+header div {
+    padding-left: 10px;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+}
+
+.logo {
+    align-self: center;
+    padding-left: 360px;
+}
+
+main {
+    width: 1024px;
+    height: 468px;
+    margin: 0 auto;
+    display: flex;
+    background-color: #fff;
+}
+
+.sidebar {
+    /*c */
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 45px;
+    font-size: 36px;
+    /* box-sizing: border-box; */
+
+}
+
+.sidebar a {
+    color: #66CCCC;
+    text-decoration: none;
+
+
+}
+
+.sidebar a:hover {
+    color: #FF997C;
+    font-weight: 900;
+}
+
+div .date {
+    /* border: #000000 1px solid; */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 新細明體;
+    color: red;
+    margin-top: 45pt;
+    margin-left: 30px;
+}
+
+section {
+    /* border: 1px solid #000000; */
+    width: 724px;
+    padding-top: 50px;
+}
+
+section table img {
+    width: 160px;
+    height: 120px;
+    border: 10px solid #e7e7e7;
+    box-sizing: border-box;
+}
+
+section table td {
+    /* border: 1px solid #000000; */
+    padding-right: 30px;
+}
+
+/* .pt{
+    padding-top: 38px;
+} */
+tr td p {
+    /* border: 1px solid #000000; */
+    text-align: center;
+    margin-top: 2px;
+    color: #5acecb;
+}
+
+section table img:hover {
+    border: 10px solid #FF997C;
+}
+
+.trans:hover {
+    transform: scale(1.2);
+    transition: all 1s ease 0s;
+}

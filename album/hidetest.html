@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body * {
+            box-shadow: 0 0 3px black;
+            margin: auto;
+        }
+
+        .bg {
+            background-color: black;
+            width: 1000px;
+            height: 1000px;
+        }
+
+        .test {
+            background-color: aqua;
+            transition: all 2s;
+            position: fixed;
+            border: 20px solid white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hide {
+            opacity: 0;
+        }
+
+        .dnone {
+            /* width: 0;
+            height: 0; */
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="onoff()">test</button>
+    <div class=" bg">
+        <div class="test" onclick="onoff()">
+            <div>X</div>
+            <img src="../images/0504.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+<script>
+    function disapear() {
+        let onoff = document.getElementsByClassName('test');
+        if (onoff[0].classList.contains('hide')) {
+            onoff[0].classList.add('dnone');
+            // onoff[1].classList.add('dnone');
+        } else {
+            onoff[0].classList.remove('dnone');
+            // onoff[1].classList.remove('dnone');
+        }
+    }
+    function onoff() {
+        let onoff = document.getElementsByClassName('test');
+        if (onoff[0].classList.contains('hide')) {
+            onoff[0].classList.remove('hide');
+            disapear();
+            // onoff[1].classList.remove('hide');
+        } else {
+            onoff[0].classList.add('hide');
+            // onoff[1].classList.add('hide');
+            // disapear();
+        setTimeout(disapear, 2000);
+        }
+    }
+</script>
+
+</html>
