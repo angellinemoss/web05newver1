@@ -239,9 +239,12 @@ main aside>a:hover {
         border: 1px solid #000000;
         border: 5px solid #e7e7e7;
         width: 250px;
-        cursor: pointer;
         /* height: 170px; */
 
+    }
+
+    .collection {
+        cursor: pointer;
     }
 
     .flexcolletion img:active {
@@ -256,7 +259,7 @@ main aside>a:hover {
         height: 100%;
         top: 0px;
         left: 0px;
-        transition: 1s;
+        transition: 0.5s;
     }
 
     #close {
@@ -264,7 +267,7 @@ main aside>a:hover {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: 1s;
+        transition: 0.5s;
     }
 
     #closeicon span {
