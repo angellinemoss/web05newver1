@@ -69,6 +69,10 @@
     </article>
 </body>
 <script>
+
+    let filter = document.getElementById('filter');
+    let close = document.getElementById('close');
+    let switching = true;
     function transalbum(album1) {
         const album = document.getElementsByClassName("bigalbum")[0].attributes["src"];
         album.value = album1;
@@ -84,12 +88,11 @@
             close.classList.remove('dnone');
             filter.classList.remove('dnone');
         }
+        switching = !switching;
     }
-    let switching = false;
-    let filter = document.getElementById('filter');
-    let close = document.getElementById('close');
+
     function onoff() {
-        if (!switching) {
+        if (switching) {
             switching = !switching;
             if (close.classList.contains('slow_hide')) {
                 close.classList.remove('slow_hide');
@@ -101,6 +104,7 @@
                 filter.classList.add('slow_hide');
                 setTimeout(disapear, 1500);
             }
+
         }
 
         // let delay = setTimeout(disapear, 1500);
