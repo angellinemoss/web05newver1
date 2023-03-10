@@ -240,12 +240,12 @@ main aside>a:hover {
         border: 5px solid #e7e7e7;
         width: 250px;
         /* height: 170px; */
-
-    }
-
-    .collection {
         cursor: pointer;
     }
+
+    /* .collection {
+        
+    } */
 
     .flexcolletion img:active {
         border: 5px solid #FF997C;
