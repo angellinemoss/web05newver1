@@ -233,13 +233,13 @@ main aside>a:hover {
         align-items: center;
         margin-top: 0px;
         margin-left: 0px;
-        padding: 20px 70px;
     }
 
     div.flexcolletion img {
         border: 1px solid #000000;
         border: 5px solid #e7e7e7;
         width: 250px;
+        cursor: pointer;
         /* height: 170px; */
 
     }
