@@ -86,23 +86,25 @@
         }
     }
     let switching = 0;
-
+    let filter = document.getElementById('filter');
+    let close = document.getElementById('close');
     function onoff() {
         switching = !switching;
-        let filter = document.getElementById('filter');
-        let close = document.getElementById('close');
-        let delay = setTimeout(disapear, 1500);
-        if (close.classList.contains('slow_hide')) {
-            close.classList.remove('slow_hide');
-            filter.classList.remove('slow_hide');
-            disapear();
-        } else {
-            filter.classList.add('slow_hide');
-            close.classList.add('slow_hide');
-            filter.classList.add('slow_hide');
-            // clearTimeout(delay);
-            setTimeout(disapear, 1500);
+        while (switching) {
+            if (close.classList.contains('slow_hide')) {
+                close.classList.remove('slow_hide');
+                filter.classList.remove('slow_hide');
+                disapear();
+            } else {
+                filter.classList.add('slow_hide');
+                close.classList.add('slow_hide');
+                filter.classList.add('slow_hide');
+                setTimeout(disapear, 1500);
+            }
         }
+
+        // let delay = setTimeout(disapear, 1500);
+
     }
     // function lightbox() {
     //     let filter = document.getElementById('filter');
