@@ -85,12 +85,12 @@
             filter.classList.remove('dnone');
         }
     }
-    let switching = 0;
+    let switching = false;
     let filter = document.getElementById('filter');
     let close = document.getElementById('close');
     function onoff() {
-        switching = !switching;
-        while (switching) {
+        if (!switching) {
+            switching = !switching;
             if (close.classList.contains('slow_hide')) {
                 close.classList.remove('slow_hide');
                 filter.classList.remove('slow_hide');
