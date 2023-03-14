@@ -1,7 +1,6 @@
-/* body * {
-    box-sizing: border-box;
+body * {
     box-shadow: 0 0 5px black;
-} */
+}
 
 body {
     background-color: #E7E7E7 !important;
