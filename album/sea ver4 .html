@@ -95,17 +95,19 @@
     }
 
     function onoff() {
-        if (switching) {
-            switching = !switching;
-            if (close.classList.contains('slow_hide')) {
-                close.classList.remove('slow_hide');
-                filter.classList.remove('slow_hide');
-                disappear();
-            } else {
-                filter.classList.add('slow_hide');
-                close.classList.add('slow_hide');
-                filter.classList.add('slow_hide');
-                setTimeout(disappear, 500);
+        if (window.innerWidth <= 700) {
+            if (switching) {
+                switching = !switching;
+                if (close.classList.contains('slow_hide')) {
+                    close.classList.remove('slow_hide');
+                    filter.classList.remove('slow_hide');
+                    disappear();
+                } else {
+                    filter.classList.add('slow_hide');
+                    close.classList.add('slow_hide');
+                    filter.classList.add('slow_hide');
+                    setTimeout(disappear, 500);
+                }
             }
         }
 
