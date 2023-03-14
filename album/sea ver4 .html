@@ -95,25 +95,26 @@
     }
 
     function onoff() {
-        if (window.innerWidth <= 700) {
-            if (switching) {
-                switching = !switching;
-                if (close.classList.contains('slow_hide')) {
-                    close.classList.remove('slow_hide');
-                    filter.classList.remove('slow_hide');
-                    disappear();
-                } else {
-                    filter.classList.add('slow_hide');
-                    close.classList.add('slow_hide');
-                    filter.classList.add('slow_hide');
-                    setTimeout(disappear, 500);
-                }
+        if (switching) {
+            switching = !switching;
+            if (close.classList.contains('slow_hide')) {
+                close.classList.remove('slow_hide');
+                filter.classList.remove('slow_hide');
+                disappear();
+            } else {
+                filter.classList.add('slow_hide');
+                close.classList.add('slow_hide');
+                filter.classList.add('slow_hide');
+                setTimeout(disappear, 500);
             }
         }
-
-        // let delay = setTimeout(disapear, 1500);
-
     }
+    window.addEventListener('resize', function () {
+        if (window.innerWidth <= 700) {
+            onoff();
+        }
+    });
+
     // function lightbox() {
     //     let filter = document.getElementById('filter');
     //     let close = document.getElementById('close');
