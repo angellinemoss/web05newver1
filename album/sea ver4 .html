@@ -48,8 +48,8 @@
             </aside>
         </main>
         <div class="frame">
-            <div id="filter" class="filter"></div>
-            <div id="close" class="" style="text-align: right;">
+            <div id="filter" class="filter dnone"></div>
+            <div id="close" class="dnone" style="text-align: right;">
                 <div id="closeicon" class="d-MD-none ">
                     <span onclick="onoff()">X</span>
                 </div>
@@ -94,9 +94,15 @@
         switching = !switching;
     }
 
+    window.addEventListener('resize', function () {
+        console.log(window.innerWidth)
+    });
+
     function onoff() {
+
         if (switching) {
             switching = !switching;
+
             if (close.classList.contains('slow_hide')) {
                 close.classList.remove('slow_hide');
                 filter.classList.remove('slow_hide');
@@ -108,12 +114,8 @@
                 setTimeout(disappear, 500);
             }
         }
+        console.log(switching)
     }
-    window.addEventListener('resize', function () {
-        if (window.innerWidth <= 700) {
-            onoff();
-        }
-    });
 
     // function lightbox() {
     //     let filter = document.getElementById('filter');
