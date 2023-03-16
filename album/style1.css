@@ -118,7 +118,7 @@ main aside>a:hover {
 
 
 
-/* 瀏覽器寬度大於820px*/
+/* 瀏覽器寬度大於701px*/
 /*   同時定義媒體類型和媒體特性，中間需用 and 連結*/
 @media screen and (min-width:701px) {
     .d-MD-none {
@@ -127,7 +127,7 @@ main aside>a:hover {
 }
 
 
-/*瀏覽器寬度小於 820px  */
+/*瀏覽器寬度小於700px  */
 @media screen and (max-width:700px) {
     article {
         width: 700px;
